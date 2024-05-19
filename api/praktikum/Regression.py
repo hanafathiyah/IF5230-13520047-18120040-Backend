@@ -20,7 +20,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-!gdown 1cVz-CMEnOA2unkV4Jmmh_2H1DtbV12X2
+# !gdown 1cVz-CMEnOA2unkV4Jmmh_2H1DtbV12X2
 df = pd.read_csv("used_device_data.csv")
 df.head()
 

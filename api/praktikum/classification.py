@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 
 """## Load Data"""
 
-!gdown 1gf3SD3VI1fQyZQjaIQHwdWiuQYRIOGkX
+# !gdown 1gf3SD3VI1fQyZQjaIQHwdWiuQYRIOGkX
 df = pd.read_csv("telecom_churn.csv")
 df.head()
 

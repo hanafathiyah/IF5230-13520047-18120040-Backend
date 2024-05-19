@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/15albtad6Olvnem9Pzd8t0nNfovI45eGy
 """
 
-!pip install accelerate datasets evaluate seqeval
+# !pip install accelerate datasets evaluate seqeval
 
 """# LSTM"""
 
