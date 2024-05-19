@@ -25,11 +25,12 @@ import scipy.optimize as opt
 from sklearn import preprocessing
 # %matplotlib inline
 import matplotlib.pyplot as plt
+import os
 
 """## Load Data"""
 
 # !gdown 1gf3SD3VI1fQyZQjaIQHwdWiuQYRIOGkX
-df = pd.read_csv("telecom_churn.csv")
+df = pd.read_csv(os.path.join(os.path.dirname(__file__), 'telecom_churn.csv'))
 df.head()
 
 """## Data Pre-processing and Selection"""
@@ -124,6 +125,9 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 print(confusion_matrix(y_test, yhat_LR, labels=[1,0]))
+
+def get_confusion_matrix_LR():
+    return confusion_matrix(y_test, yhat_LR, labels=[1,0])
 
 from sklearn.metrics import confusion_matrix
 cnf_matrix = confusion_matrix(y_test, yhat_LR, labels=[1,0])
@@ -290,3 +294,6 @@ print(classification_report(y_test, yhat_KNN))
 
 from sklearn.metrics import log_loss
 log_loss(y_test, yhat_prob_KNN)
+
+def json_telco():
+    return (df.to_json(orient='records'))
