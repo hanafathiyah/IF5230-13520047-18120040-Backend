@@ -297,3 +297,10 @@ log_loss(y_test, yhat_prob_KNN)
 
 def json_telco():
     return (df.to_json(orient='records'))
+
+print(type(confusion_matrix(y_test, yhat_LR, labels=[1,0])))
+
+print(X_test)
+
+def predict_LR(X_input):
+    return (LR.predict(X=X_input))
