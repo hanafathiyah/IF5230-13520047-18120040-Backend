@@ -30,4 +30,4 @@ def predict_log_reg():
   return jsonify(predict_LR([[req['AccountWeeks'], req['ContractRenewal'], req['DataPlan'], req['DataUsage'], req['CustServCall'], req['DayMins'], req['DayCalls'], req['MonthlyCharge'], req['OverageFee'], req['RoamMins']]]).tolist())
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=False,host='0.0.0.0')
