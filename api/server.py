@@ -9,7 +9,7 @@ from praktikum.classification import predict_LR
 from praktikum.chatbot import findAnswer
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:5173")
+CORS(app, origins="*")
 
 @app.route('/chatbot_regex', methods=['POST'])
 def handle_chatbot_regex_post():
